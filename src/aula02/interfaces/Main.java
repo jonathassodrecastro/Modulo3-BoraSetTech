@@ -1,13 +1,19 @@
 package aula02.interfaces;
 
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        new Quadrado(2);
-        FormaGeometrica formaGeometrica = new FormaGeometrica() {
-            @Override
-            public long calculaArea() {
-                return 100;
-            }
-        };
+        List<FormaGeometrica> formaGeometricas = List.of(
+                new Quadrado(2),
+                new Triangulo(2,3),
+                //expressão lambda que cria o método anonimo a partir da interface funcional
+                () -> 1000
+        );
+
+    for(FormaGeometrica formaGeometrica : formaGeometricas){
+        formaGeometrica.print();
+    }
+
     }
 }
