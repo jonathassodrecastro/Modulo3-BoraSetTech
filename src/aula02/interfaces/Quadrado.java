@@ -2,12 +2,14 @@ package aula02.interfaces;
 
 public class Quadrado implements FormaGeometrica{
 
-    private long lado;
+    protected long lado;
 
-    public Quadrado(long lado){ }
+    public Quadrado(long lado){
+        this.lado = lado;
+    }
 
     @Override
-    public long calculaArea() {
+    public long calculaArea(Integer a) {
         return lado * lado;
     }
 

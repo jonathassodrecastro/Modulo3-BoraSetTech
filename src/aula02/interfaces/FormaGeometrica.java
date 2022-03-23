@@ -4,9 +4,7 @@ package aula02.interfaces;
 public interface FormaGeometrica {
 
 
-    long calculaArea();
+    long calculaArea(Integer a);
 
-    default void print(){
-        System.out.println("Calculo da area: " + calculaArea());
-    }
+
 }
